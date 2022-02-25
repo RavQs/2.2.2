@@ -13,7 +13,7 @@ public class CarController {
     private CarService carService;
 
     @GetMapping(value = "/cars")
-    public String getCars(@RequestParam(value = "count", defaultValue = "2") int count, ModelMap model) {
+    public String getCars(@RequestParam(value = "count", defaultValue = "5") int count, ModelMap model) {
         model.addAttribute("message", carService.getCarByNum(count));
         return "second/cars";
     }
