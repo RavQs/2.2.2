@@ -3,7 +3,6 @@ package web.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import web.DAO.CarDao;
-import web.DAO.CarDaoImpl;
 import web.Model.Car;
 
 import java.util.List;
@@ -16,5 +15,9 @@ public class CarServiceImpl implements CarService {
     @Override
     public List<Car> getCarByNum(int count) {
         return carDao.getCarByNum(count);
+    }
+
+    public List<String> getUrlByNum(int count) {
+        return carDao.getUrlByNum(count);
     }
 }

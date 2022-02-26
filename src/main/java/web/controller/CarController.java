@@ -15,6 +15,7 @@ public class CarController {
     @GetMapping(value = "/cars")
     public String getCars(@RequestParam(value = "count", defaultValue = "5") int count, ModelMap model) {
         model.addAttribute("message", carService.getCarByNum(count));
+        model.addAttribute("messageurl", carService.getUrlByNum(count));
         return "second/cars";
     }
 }
